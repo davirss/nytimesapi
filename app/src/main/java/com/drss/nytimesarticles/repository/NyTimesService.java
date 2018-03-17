@@ -25,6 +25,6 @@ public interface NyTimesService {
     Call<QueryArticleResponse> getArticles(@Query("q") String term,
                                            @Query("fl") String fields,
                                            @Query("page") Integer page,
-                                           @Query("facet-filter") Boolean facetFilter,
+                                           @Query("facet_filter") Boolean facetFilter,
                                            @Query("facet_field") String facet_field);
 }

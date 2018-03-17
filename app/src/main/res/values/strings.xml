@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NYTimesArticles</string>
+    <string name="most_viewed_articles">Artigos mais vistos.</string>
+    <string name="articles_containing">Artigos contendo \'</string>
 </resources>

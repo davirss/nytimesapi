@@ -17,7 +17,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Digite aqui um termo a ser pesquisado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title" />
@@ -31,7 +31,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Artigo"
-        android:textAppearance="@android:style/TextAppearance.Material.Title"
         app:layout_constraintBottom_toTopOf="@+id/rv_articles"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

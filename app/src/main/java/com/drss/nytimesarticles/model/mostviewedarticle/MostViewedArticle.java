@@ -37,7 +37,7 @@ public class MostViewedArticle extends BaseModel {
     @Expose
     private String source;
     @SerializedName("media")
-    @Expose
+    @Expose(serialize = false, deserialize =  false)
     private List<MostViewedArticleMedia> media;
 
     public String getUrl() {

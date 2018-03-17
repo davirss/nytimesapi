@@ -4,7 +4,7 @@ package com.drss.nytimesarticles.model;
  * Created by davir on 15/03/2018.
  */
 
-public class DisplayArticle {
+public class DisplayArticle extends BaseModel{
 
     private String title;
     private String articleAbstract;

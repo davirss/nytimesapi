@@ -53,6 +53,8 @@ public class MostViewedArticleBusiness implements Callback<MostViewedArticleResp
 
     List<DisplayArticle> mCurrentDisplayArticles = new ArrayList<DisplayArticle>();
 
+    private static final int MAX_DISPLAYARTICLES = 10;
+
     @Override
     public void onResponse(Call<MostViewedArticleResponse> call, Response<MostViewedArticleResponse> response) {
         if(mostViwedArticlesContract != null){
@@ -60,6 +62,9 @@ public class MostViewedArticleBusiness implements Callback<MostViewedArticleResp
 
             for(MostViewedArticle mostViewedArticle : mostViewedArticles){
                 mCurrentDisplayArticles.add(DisplayArticleUtil.fromMostViewedArticle(mostViewedArticle));
+                if(mCurrentDisplayArticles.size() == MAX_DISPLAYARTICLES){
+                    break;
+                }
             }
 
             mostViwedArticlesContract.displayMostViewedArticles(mCurrentDisplayArticles);
@@ -69,6 +74,7 @@ public class MostViewedArticleBusiness implements Callback<MostViewedArticleResp
     @Override
     public void onFailure(Call<MostViewedArticleResponse> call, Throwable t) {
         if(mostViwedArticlesContract != null)
-            mostViwedArticlesContract.displayMostViewedArticlesError("Erro");
+            t.printStackTrace();
+            mostViwedArticlesContract.displayMostViewedArticlesError("Erro ");
     }
 }
